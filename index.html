@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>NELT 회원 대상 판매 제휴 제안 · NE능률 × 사월이네공부방</title>
+<meta name="description" content="NELT 개인 응시권 판매 제휴 제안. 수수료 판매가의 10%, NE능률 본사 직거래.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<style>
+  :root{
+    --ink:#131F45;
+    --ink-2:#2B3A66;
+    --muted:#616C8C;
+    --line:#DEE3F0;
+    --line-soft:#EBEEF7;
+    --paper:#FFFFFF;
+    --wash:#F1F3FA;
+    --accent:#DE5F0C;
+    --accent-soft:#FDF1E7;
+    --note:#8A6A22;
+    --note-soft:#FBF5E6;
+    --shadow:0 1px 2px rgba(19,31,69,.05), 0 8px 24px -12px rgba(19,31,69,.18);
+    --radius:14px;
+    --maxw:1000px;
+    font-synthesis-weight:none;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--wash);
+    color:var(--ink);
+    font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Malgun Gothic",system-ui,sans-serif;
+    font-size:16px;line-height:1.68;
+    font-feature-settings:"tnum";
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  a{color:var(--ink);text-decoration:none}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  /* ---------- 표지 ---------- */
+  .mast{background:var(--ink);color:#fff;padding:52px 0 44px;position:relative;overflow:hidden}
+  .mast::after{content:"";position:absolute;right:-90px;top:-70px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(222,95,12,.34),transparent 66%)}
+  .mast .wrap{position:relative;z-index:1}
+  .brandline{display:flex;align-items:center;gap:12px;font-size:12.5px;font-weight:600;letter-spacing:.14em;color:rgba(255,255,255,.72);text-transform:uppercase}
+  .brandline span.sep{width:22px;height:1px;background:rgba(255,255,255,.4)}
+  h1.title{font-size:clamp(29px,5.1vw,44px);line-height:1.24;font-weight:800;letter-spacing:-.028em;margin:20px 0 0}
+  h1.title em{font-style:normal;color:#FFB076}
+  .lede{margin:20px 0 0;max-width:58ch;font-size:clamp(15px,1.7vw,17px);color:rgba(255,255,255,.9);font-weight:400}
+  .lede b{color:#fff;font-weight:700}
+  .firstbadge{display:inline-flex;align-items:center;gap:8px;margin-top:26px;padding:8px 15px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.26);font-size:13.5px;font-weight:600;color:#fff}
+  .firstbadge i{width:6px;height:6px;border-radius:50%;background:#FF9A4D;flex:none}
+  .mastmeta{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.18);display:flex;flex-wrap:wrap;gap:8px 30px;font-size:13.5px;color:rgba(255,255,255,.7)}
+  .mastmeta b{color:#fff;font-weight:600}
+
+  /* ---------- 섹션 공통 ---------- */
+  .band{padding:60px 0}
+  .band + .band{padding-top:8px}
+  .sechead{display:flex;align-items:baseline;gap:14px;margin:0 0 8px}
+  .secnum{font-size:12.5px;font-weight:700;letter-spacing:.16em;color:var(--accent)}
+  h2.sectitle{font-size:clamp(21px,3vw,27px);font-weight:800;letter-spacing:-.024em;margin:0}
+  .secsub{margin:0 0 26px;color:var(--muted);font-size:15px;max-width:62ch}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+
+  .tag{display:inline-block;padding:4px 10px;border-radius:6px;font-size:12px;font-weight:700;letter-spacing:.02em}
+  .tag-main{background:var(--accent);color:#fff}
+  .tag-add{background:var(--note-soft);color:var(--note);border:1px solid #E9DCBB}
+
+  /* ---------- 요약표 ---------- */
+  .facts{padding:6px 26px 10px}
+  .fact{display:grid;grid-template-columns:132px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--line-soft)}
+  .facts .fact:last-child{border-bottom:0}
+  .fact dt{color:var(--muted);font-size:14px;font-weight:600}
+  .fact dd{margin:0;font-size:15.5px}
+  .fact dd b{font-weight:700}
+  .hl{color:var(--accent);font-weight:800}
+  .fact dd small{display:block;color:var(--muted);font-size:13.5px;margin-top:3px}
+
+  .jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .jump a{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;background:var(--paper);border:1px solid var(--line);border-radius:10px;font-size:14px;font-weight:600;transition:border-color .16s,transform .16s}
+  .jump a:hover{border-color:var(--accent);transform:translateY(-1px)}
+  .jump a::after{content:"↓";color:var(--accent);font-weight:700}
+
+  /* ---------- 스펙 칩 ---------- */
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
+  .chip{padding:7px 13px;background:var(--paper);border:1px solid var(--line);border-radius:999px;font-size:13.5px;color:var(--ink-2);font-weight:500}
+  .chip b{font-weight:700;color:var(--ink)}
+
+  /* ---------- 레벨 스펙트럼 ---------- */
+  .spectrum{padding:24px 26px 22px;margin-bottom:24px}
+  .spectrum h3{margin:0 0 4px;font-size:15px;font-weight:700}
+  .spectrum p.note{margin:0 0 18px;font-size:13.5px;color:var(--muted)}
+  .lvrow{display:grid;grid-template-columns:repeat(9,1fr);gap:5px}
+  .lv{text-align:center;padding:11px 2px 10px;border-radius:9px;background:var(--wash);border:1px solid var(--line-soft)}
+  .lv.on{background:var(--accent-soft);border-color:#F4C9A6}
+  .lv strong{display:block;font-size:13px;font-weight:800;letter-spacing:-.02em}
+  .lv span{display:block;font-size:11px;color:var(--muted);margin-top:2px;white-space:nowrap}
+  .lv.on strong,.lv.on span{color:#A8460A}
+  .lvlegend{margin:14px 0 0;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px}
+  .lvlegend i{width:11px;height:11px;border-radius:3px;background:var(--accent-soft);border:1px solid #F4C9A6;flex:none}
+
+  /* ---------- 가격 ---------- */
+  .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .price{padding:22px 20px 20px;position:relative}
+  .price.pick{border-color:var(--accent);box-shadow:0 1px 2px rgba(19,31,69,.05),0 10px 28px -14px rgba(222,95,12,.5)}
+  .price .pickmark{position:absolute;top:-11px;left:20px;background:var(--accent);color:#fff;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:5px;letter-spacing:.02em}
+  .price h4{margin:0;font-size:15px;font-weight:700}
+  .price .amt{margin:10px 0 2px;font-size:29px;font-weight:800;letter-spacing:-.035em}
+  .price .amt i{font-style:normal;font-size:15px;font-weight:600;margin-left:2px}
+  .price .per{font-size:13px;color:var(--muted)}
+  .price ul{list-style:none;margin:16px 0 0;padding:14px 0 0;border-top:1px solid var(--line-soft);font-size:13.5px;color:var(--ink-2)}
+  .price li{position:relative;padding-left:14px;margin-bottom:5px}
+  .price li:last-child{margin-bottom:0}
+  .price li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:#C3CBE0}
+  .price.pick li::before{background:var(--accent)}
+  .footnote{margin:16px 0 0;padding:14px 18px;background:var(--paper);border:1px dashed var(--line);border-radius:10px;font-size:13.5px;color:var(--ink-2)}
+
+  /* ---------- 자료 카드 ---------- */
+  .docs{display:grid;gap:14px}
+  .docs.three{grid-template-columns:repeat(3,1fr)}
+  .docs.six{grid-template-columns:repeat(3,1fr)}
+  .doc{display:flex;flex-direction:column;overflow:hidden}
+  .doc figure{margin:0;background:var(--wash);border-bottom:1px solid var(--line);aspect-ratio:1/1.18;overflow:hidden;position:relative}
+  .doc figure img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+  .doc .body{padding:16px 17px 15px;flex:1;display:flex;flex-direction:column}
+  .doc .eyebrow{font-size:11.5px;font-weight:700;letter-spacing:.1em;color:var(--accent);text-transform:uppercase}
+  .doc h4{margin:6px 0 4px;font-size:15.5px;font-weight:700;letter-spacing:-.02em}
+  .doc p{margin:0;font-size:13.5px;color:var(--muted);flex:1}
+  .doc .acts{display:flex;gap:8px;margin-top:15px}
+  .btn{appearance:none;border:1px solid var(--line);background:var(--paper);color:var(--ink);font-family:inherit;font-size:13.5px;font-weight:700;padding:9px 12px;border-radius:9px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;transition:background .16s,border-color .16s,color .16s}
+  .btn:hover{border-color:var(--ink);}
+  .btn-open{flex:1;background:var(--ink);border-color:var(--ink);color:#fff}
+  .btn-open:hover{background:#0C1633;border-color:#0C1633}
+  .btn-dl{flex:none;padding:9px 13px}
+  .btn-dl:hover{background:var(--wash)}
+
+  /* ---------- 안내 박스 ---------- */
+  .notice{padding:20px 22px;background:var(--note-soft);border:1px solid #EFE3C6;border-left:4px solid #D9B65E;border-radius:12px;margin-bottom:24px}
+  .notice strong{display:block;font-size:15px;margin-bottom:5px;color:#6E5416}
+  .notice p{margin:0;font-size:14.5px;color:#5C4712}
+
+  /* ---------- 구성 정보 ---------- */
+  .specs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px}
+  .spec{padding:18px 18px 16px}
+  .spec dt{font-size:12.5px;color:var(--muted);font-weight:600}
+  .spec dd{margin:5px 0 0;font-size:15px;font-weight:700;letter-spacing:-.02em}
+  .spec dd small{display:block;font-weight:500;font-size:12.5px;color:var(--muted);margin-top:2px}
+
+  /* ---------- 단계 ---------- */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .step{padding:22px 20px 20px}
+  .step .no{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--accent)}
+  .step h4{margin:8px 0 6px;font-size:16px;font-weight:700}
+  .step p{margin:0;font-size:14px;color:var(--ink-2)}
+  .step .tail{margin-top:13px;padding-top:12px;border-top:1px solid var(--line-soft);font-size:13px;color:var(--muted)}
+
+  /* ---------- 정산 ---------- */
+  .settle{display:grid;grid-template-columns:1.05fr 1fr;gap:14px}
+  .rate{padding:28px 26px;background:var(--ink);color:#fff;border:0}
+  .rate .lbl{font-size:13px;font-weight:600;letter-spacing:.1em;color:rgba(255,255,255,.62);text-transform:uppercase}
+  .rate .big{margin:12px 0 0;font-size:46px;font-weight:800;letter-spacing:-.04em;line-height:1}
+  .rate .big span{font-size:18px;font-weight:600;margin-left:6px;color:rgba(255,255,255,.8)}
+  .rate p{margin:14px 0 0;font-size:14.5px;color:rgba(255,255,255,.82)}
+  .settle ul{list-style:none;margin:0;padding:22px 24px}
+  .settle ul li{position:relative;padding-left:19px;margin-bottom:13px;font-size:14.5px}
+  .settle ul li:last-child{margin-bottom:0}
+  .settle ul li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:2px;background:var(--accent)}
+  .settle ul li b{font-weight:700}
+  .settle ul li small{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+
+  /* ---------- 다음 단계 ---------- */
+  .flowlist{list-style:none;margin:0;padding:8px 26px 4px;counter-reset:f}
+  .flowlist li{counter-increment:f;position:relative;padding:18px 0 18px 46px;border-bottom:1px solid var(--line-soft)}
+  .flowlist li:last-child{border-bottom:0}
+  .flowlist li::before{content:counter(f);position:absolute;left:0;top:19px;width:27px;height:27px;border-radius:50%;background:var(--wash);border:1px solid var(--line);color:var(--ink-2);font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .flowlist li.key::before{background:var(--accent);border-color:var(--accent);color:#fff}
+  .flowlist h4{margin:0 0 4px;font-size:16px;font-weight:700}
+  .flowlist p{margin:0;font-size:14.5px;color:var(--ink-2)}
+  .flowlist p.why{margin-top:7px;padding:10px 13px;background:var(--accent-soft);border-radius:8px;font-size:13.5px;color:#8A4109}
+
+  .reply{margin-top:14px;padding:24px 26px}
+  .reply h3{margin:0 0 14px;font-size:16px;font-weight:700}
+  .replygrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .rcard{padding:16px 18px;background:var(--wash);border:1px solid var(--line-soft);border-radius:11px}
+  .rcard dt{font-size:12.5px;color:var(--muted);font-weight:600;margin-bottom:3px}
+  .rcard dd{margin:0;font-size:15.5px;font-weight:700;letter-spacing:-.01em}
+  .rcard dd a{border-bottom:1.5px solid var(--accent)}
+  .rcard dd small{display:block;font-weight:500;font-size:13px;color:var(--muted);margin-top:3px}
+
+  /* ---------- 푸터 ---------- */
+  footer{background:var(--ink);color:rgba(255,255,255,.72);padding:38px 0 44px;margin-top:64px;font-size:13.5px}
+  footer .who{color:#fff;font-size:15px;font-weight:700;margin-bottom:8px}
+  footer a{color:#FFB076}
+  footer .thanks{margin:0 0 22px;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.85);font-size:14.5px;max-width:60ch}
+
+  /* ---------- 뷰어 ---------- */
+  .viewer{position:fixed;inset:0;z-index:90;display:none;background:rgba(10,16,36,.72);backdrop-filter:blur(3px);padding:24px}
+  .viewer[open],.viewer.show{display:flex;align-items:center;justify-content:center}
+  .vbox{background:#fff;border-radius:14px;width:100%;max-width:1080px;height:100%;max-height:92vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 30px 80px -20px rgba(0,0,0,.5)}
+  .vhead{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line);flex:none}
+  .vhead .vt{flex:1;min-width:0}
+  .vhead .vt strong{display:block;font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .vhead .vt span{font-size:12.5px;color:var(--muted)}
+  .vframe{flex:1;border:0;width:100%;background:var(--wash)}
+  .vfoot{display:none;padding:22px;text-align:center;font-size:14px;color:var(--muted)}
+
+  @media (max-width:900px){
+    .docs.three,.docs.six{grid-template-columns:repeat(2,1fr)}
+    .prices,.steps{grid-template-columns:1fr}
+    .specs{grid-template-columns:repeat(2,1fr)}
+    .settle{grid-template-columns:1fr}
+    .lvrow{grid-template-columns:repeat(3,1fr)}
+    .lv span{white-space:normal}
+  }
+  @media (max-width:600px){
+    .wrap{padding:0 18px}
+    .band{padding:44px 0}
+    .facts{padding:4px 18px 8px}
+    .fact{grid-template-columns:1fr;gap:2px;padding:14px 0}
+    .replygrid{grid-template-columns:1fr}
+    .docs.three,.docs.six{grid-template-columns:1fr 1fr}
+    .doc .body{padding:13px 13px 12px}
+    .doc h4{font-size:14.5px}
+    .doc p{font-size:12.5px;line-height:1.55}
+    .doc .acts{flex-direction:column;gap:6px;margin-top:12px}
+    .btn-open,.btn-dl{width:100%;padding:9px 8px;font-size:13px}
+    .viewer{padding:0}
+    .vbox{border-radius:0;max-height:100vh}
+    .flowlist{padding:4px 18px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ 표지 ═══════════ -->
+<header class="mast">
+  <div class="wrap">
+    <p class="brandline">NE능률 <span class="sep"></span> 사월이네공부방</p>
+    <h1 class="title">NELT 회원 대상<br>판매 제휴 <em>제안</em></h1>
+    <p class="lede">앞서 협의해 주신 내용을 정리해 드립니다. 판매 상품은 <b>NELT 개인 응시권</b>이고,
+      수수료는 <b>판매가의 10%</b>, 총판을 거치지 않고 <b>NE능률 본사와 직거래</b>로 진행됩니다.</p>
+    <p class="firstbadge"><i></i> 사월이네공부방과 함께하는 첫 공식 프로모션입니다</p>
+    <div class="mastmeta">
+      <span>2026년 8월</span>
+      <span>NE능률 디지털서비스본부 디지털마케팅팀</span>
+      <span>담당 <b>김동범</b></span>
+      <span><a href="https://www.nelt.co.kr/" target="_blank" rel="noopener" style="color:#FFB076">www.nelt.co.kr</a></span>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════ 01 한눈에 ═══════════ -->
+<section class="band" id="summary">
+  <div class="wrap">
+    <div class="sechead"><span class="secnum">01</span><h2 class="sectitle">한눈에 보는 제안</h2></div>
+    <p class="secsub">아래 여섯 줄이 이번 제안의 전부입니다. 세부 내용과 실제 자료는 이어지는 항목에서 바로 확인하실 수 있습니다.</p>
+
+    <div class="card">
+      <dl class="facts">
+        <div class="fact"><dt>판매 상품</dt><dd><b>NELT 개인 응시권</b> — 1회권 · 2회권 · 3회권<small>NE능률이 개발한 초·중등 영어 레벨테스트입니다.</small></dd></div>
+        <div class="fact"><dt>수수료</dt><dd><span class="hl">판매가의 10%</span><small>캠페인 회차가 끝나면 판매 실적을 집계해 정산합니다.</small></dd></div>
+        <div class="fact"><dt>거래 방식</dt><dd><b>NE능률 본사와 직거래</b><small>총판을 거치지 않습니다.</small></dd></div>
+        <div class="fact"><dt>운영 주기</dt><dd>신학기·방학 시즌 기준 <b>연 2~3회 단기 스팟</b><small>회차당 1~2주 동안 짧게 집중해서 진행합니다.</small></dd></div>
+        <div class="fact"><dt>담당</dt><dd>실무 <b>이국전</b> · 소통 창구 <b>김동범</b><small>주문·정산·응시권 발급은 이국전 담당자가, 조건 협의와 연락은 제가 맡습니다.</small></dd></div>
+        <div class="fact"><dt>추가 제안</dt><dd><span class="tag tag-add">협의 전</span> NELT 문법 실전 모의고사 병행 판매<small>협의된 내용이 아니라 저희가 함께 제안드리는 항목입니다. 검토만 부탁드립니다.</small></dd></div>
+      </dl>
+    </div>
+
+    <nav class="jump" aria-label="주요 항목 바로가기">
+      <a href="#reports">성적표 샘플 3종 보기</a>
+      <a href="#grammar">모의고사 미리보기 6권</a>
+      <a href="#settle">수수료·정산 조건</a>
+      <a href="#next">다음 단계</a>
+    </nav>
+  </div>
+</section>
+
+<!-- ═══════════ 02 메인 상품 ═══════════ -->
+<section class="band" id="product">
+  <div class="wrap">
+    <div class="sechead"><span class="secnum">02</span><h2 class="sectitle">판매 상품 <span class="tag tag-main">메인</span></h2></div>
+    <p class="secsub">NELT는 한국 교육과정을 기준으로 만든 온라인 영어 레벨테스트입니다.
+      어휘·문법·듣기·독해 네 영역을 진단해 예비초부터 고3까지 9단계로 레벨을 판정하고, 응시가 끝나면 성적표와 학습 처방을 바로 제공합니다.</p>
+
+    <div class="chips">
+      <span class="chip"><b>4개 영역</b> 어휘·문법·듣기·독해</span>
+      <span class="chip">종합 테스트 <b>68문항 / 65분</b></span>
+      <span class="chip">응시자 실력에 따라 문항 난이도 결정</span>
+      <span class="chip">PC·태블릿·스마트폰 응시</span>
+      <span class="chip"><b>KATE</b> 한국영어교육학회 인증</span>
+    </div>
+
+    <div class="card spectrum">
+      <h3>9단계 레벨 구성</h3>
+      <p class="note">사월이네공부방 회원 자녀 학년대가 몰려 있는 구간을 표시했습니다.</p>
+      <div class="lvrow">
+        <div class="lv"><strong>Lv.1</strong><span>예비초~초2</span></div>
+        <div class="lv on"><strong>Lv.2</strong><span>초3~4</span></div>
+        <div class="lv on"><strong>Lv.3</strong><span>초5~6</span></div>
+        <div class="lv on"><strong>Lv.4</strong><span>중1</span></div>
+        <div class="lv on"><strong>Lv.5</strong><span>중2</span></div>
+        <div class="lv on"><strong>Lv.6</strong><span>중3</span></div>
+        <div class="lv"><strong>Lv.7</strong><span>고1</span></div>
+        <div class="lv"><strong>Lv.8</strong><span>고2</span></div>
+        <div class="lv"><strong>Lv.9</strong><span>고3</span></div>
+      </div>
+      <p class="lvlegend"><i></i> 초3 ~ 중3 · 회원 핵심 타깃 구간</p>
+    </div>
+
+    <div class="prices">
+      <div class="card price">
+        <h4>1회권</h4>
+        <p class="amt">25,000<i>원</i></p>
+        <p class="per">회당 25,000원 · 유효기간 30일</p>
+        <ul>
+          <li>부담 없이 지금 실력을 확인</li>
+          <li>공식 판매가 그대로</li>
+        </ul>
+      </div>
+      <div class="card price pick">
+        <span class="pickmark">회원 추천</span>
+        <h4>2회권</h4>
+        <p class="amt">40,000<i>원</i></p>
+        <p class="per">회당 20,000원 · 유효기간 180일</p>
+        <ul>
+          <li>진단 → 학습 → 재검증 한 세트</li>
+          <li>낱개 대비 20% 절감</li>
+          <li>누적 성적표로 성장 폭 확인</li>
+        </ul>
+      </div>
+      <div class="card price">
+        <h4>3회권</h4>
+        <p class="amt">60,000<i>원</i></p>
+        <p class="per">회당 20,000원 · 유효기간 180일</p>
+        <ul>
+          <li>장기 성장 추적</li>
+          <li>누적 성적표 활용</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footnote">초등 저학년 자녀를 둔 회원께는 문법을 제외한 <b>‘어휘＋듣기＋독해’ 상품(1회 20,000원 / 3회 48,000원)</b>도 함께 안내할 수 있습니다. 회원 자녀 학년대에 맞춰 상품을 구성해 드립니다.</p>
+  </div>
+</section>
+
+<!-- ═══════════ 03 성적표 ═══════════ -->
+<section class="band" id="reports">
+  <div class="wrap">
+    <div class="sechead"><span class="secnum">03</span><h2 class="sectitle">응시하면 이런 성적표를 받습니다</h2></div>
+    <p class="secsub">회원 학부모께서 실제로 받아보시는 성적표입니다. 표지를 눌러 바로 열어보실 수 있고, 필요하시면 내려받아 보관하셔도 됩니다.</p>
+
+    <div class="docs three">
+      <article class="card doc">
+        <figure><img src="thumb/report-summary.jpg" alt="NELT 요약 성적표 샘플 표지" loading="lazy"></figure>
+        <div class="body">
+          <p class="eyebrow">SUMMARY</p>
+          <h4>요약 성적표</h4>
+          <p>종합 레벨, 영역별 수준, 동 학년 대비 석차를 한 장으로 정리한 결과지입니다.</p>
+          <div class="acts">
+            <button class="btn btn-open" data-doc="pdf/report-summary.pdf" data-title="NELT 요약 성적표 샘플" data-meta="1페이지 · PDF">열어보기</button>
+            <a class="btn btn-dl" href="pdf/report-summary.pdf" download="NELT_요약성적표_샘플.pdf" aria-label="요약 성적표 샘플 다운로드">저장</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card doc">
+        <figure><img src="thumb/report-detail.jpg" alt="NELT 상세 성적표 샘플 표지" loading="lazy"></figure>
+        <div class="body">
+          <p class="eyebrow">DETAIL</p>
+          <h4>상세 성적표</h4>
+          <p>영역별 심층 분석과 평가 항목별 정답률, 약점에 맞춘 학습 처방까지 담은 결과지입니다.</p>
+          <div class="acts">
+            <button class="btn btn-open" data-doc="pdf/report-detail.pdf" data-title="NELT 상세 성적표 샘플" data-meta="영역별 심층 분석 · PDF">열어보기</button>
+            <a class="btn btn-dl" href="pdf/report-detail.pdf" download="NELT_상세성적표_샘플.pdf" aria-label="상세 성적표 샘플 다운로드">저장</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card doc">
+        <figure><img src="thumb/report-cumulative.jpg" alt="NELT 누적 성적표 샘플 표지" loading="lazy"></figure>
+        <div class="body">
+          <p class="eyebrow">CUMULATIVE</p>
+          <h4>누적 성적표</h4>
+          <p>2회 이상 응시하면 회차별 성장 추이가 그래프로 남습니다. 2회권 활용의 핵심 자료입니다.</p>
+          <div class="acts">
+            <button class="btn btn-open" data-doc="pdf/report-cumulative.pdf" data-title="NELT 누적 성적표 샘플" data-meta="회차별 성장 추이 · PDF">열어보기</button>
+            <a class="btn btn-dl" href="pdf/report-cumulative.pdf" download="NELT_누적성적표_샘플.pdf" aria-label="누적 성적표 샘플 다운로드">저장</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 04 추가 제안 ═══════════ -->
+<section class="band" id="grammar">
+  <div class="wrap">
+    <div class="sechead"><span class="secnum">04</span><h2 class="sectitle">함께 제안드리는 자료 <span class="tag tag-add">추가 제안 · 협의 전</span></h2></div>
+
+    <div class="notice">
+      <strong>이 항목은 앞서 협의된 내용이 아닙니다</strong>
+      <p>응시권과 함께 묶어 판매하면 회원께 도움이 될 것 같아 저희가 추가로 제안드리는 자료입니다.
+        진행 여부는 대표님 판단에 맡기겠습니다. 부담 없이 검토만 부탁드립니다.</p>
+    </div>
+
+    <p class="secsub">NELT 문법 실전 모의고사는 응시 전 문항 유형을 익히고, 응시 후 약점을 보완하는 데 쓰는 교재입니다.
+      레벨 2부터 7까지 여섯 권으로 나뉘어 있어 자녀 학년에 맞춰 고르실 수 있습니다.</p>
+
+    <dl class="specs">
+      <div class="card spec"><dt>수록 회차</dt><dd>실전 6회 ＋ 복습 2회<small>레벨별 동일 구성</small></dd></div>
+      <div class="card spec"><dt>회차당 문항</dt><dd>20문항<small>객관식 ＋ 서술형</small></dd></div>
+      <div class="card spec"><dt>소요 시간</dt><dd>제한 16분<small>평균 11분</small></dd></div>
+      <div class="card spec"><dt>정가</dt><dd>권당 13,000원<small>수수료는 응시권과 동일하게 10%</small></dd></div>
+    </dl>
+
+    <p class="secsub">각 권의 표지를 누르시면 미리보기 PDF가 바로 열립니다. 실제 문항, 문항별 출제 포인트, STUDY BOOK 해설을 함께 보실 수 있습니다.</p>
+
+    <div class="docs six">
+      <article class="card doc">
+        <figure><img src="thumb/grammar-level2.jpg" alt="문법 실전 모의고사 LEVEL 2 표지" loading="lazy"></figure>
+        <div class="body">
+          <p class="eyebrow">LEVEL 2 · 초3~4</p>
+          <h4>초등 기본</h4>
+          <p>be동사 · 일반동사 · 명령문 · 제안문</p>
+          <div class="acts">
+            <button class="btn btn-open" data-doc="pdf/grammar-level2.pdf" data-title="문법 실전 모의고사 LEVEL 2 미리보기" data-meta="초3~4 · 초등 기본">열어보기</button>
+            <a class="btn btn-dl" href="pdf/grammar-level2.pdf" download="NELT_문법실전모의고사_LEVEL2_미리보기.pdf" aria-label="LEVEL 2 미리보기 다운로드">저장</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card doc">
+        <figure><img src="thumb/grammar-level3.jpg" alt="문법 실전 모의고사 LEVEL 3 표지" loading="lazy"></figure>
+        <div class="body">
+          <p class="eyebrow">LEVEL 3 · 초5~6</p>
+          <h4>초등 심화</h4>
+          <p>미래시제 · 비교급 · 2형식 · 전치사</p>
+          <div class="acts">
+            <button class="btn btn-open" data-doc="pdf/grammar-level3.pdf" data-title="문법 실전 모의고사 LEVEL 3 미리보기" data-meta="초5~6 · 초등 심화">열어보기</button>
+            <a class="btn btn-dl" href="pdf/grammar-level3.pdf" download="NELT_문법실전모의고사_LEVEL3_미리보기.pdf" aria-label="LEVEL 3 미리보기 다운로드">저장</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card doc">
+        <figure><img src="thumb/grammar-level4.jpg" alt="문법 실전 모의고사 LEVEL 4 표지" loading="lazy"></figure>
+        <div class="body">
+          <p class="eyebrow">LEVEL 4 · 중1</p>
+          <h4>중등 기초</h4>
+          <p>문장 5형식 · to부정사 · 동명사 · 감탄문</p>
+          <div class="acts">
+            <button class="btn btn-open" data-doc="pdf/grammar-level4.pdf" data-title="문법 실전 모의고사 LEVEL 4 미리보기" data-meta="중1 · 중등 기초">열어보기</button>
+            <a class="btn btn-dl" href="pdf/grammar-level4.pdf" download="NELT_문법실전모의고사_LEVEL4_미리보기.pdf" aria-label="LEVEL 4 미리보기 다운로드">저장</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card doc">
+        <figure><img src="thumb/grammar-level5.jpg" alt="문법 실전 모의고사 LEVEL 5 표지" loading="lazy"></figure>
+        <div class="body">
+          <p class="eyebrow">LEVEL 5 · 중2</p>
+          <h4>중등 기본</h4>
+          <p>현재완료 · 수동태 · 분사 · 관계대명사</p>
+          <div class="acts">
+            <button class="btn btn-open" data-doc="pdf/grammar-level5.pdf" data-title="문법 실전 모의고사 LEVEL 5 미리보기" data-meta="중2 · 중등 기본">열어보기</button>
+            <a class="btn btn-dl" href="pdf/grammar-level5.pdf" download="NELT_문법실전모의고사_LEVEL5_미리보기.pdf" aria-label="LEVEL 5 미리보기 다운로드">저장</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card doc">
+        <figure><img src="thumb/grammar-level6.jpg" alt="문법 실전 모의고사 LEVEL 6 표지" loading="lazy"></figure>
+        <div class="body">
+          <p class="eyebrow">LEVEL 6 · 중3</p>
+          <h4>중등 심화</h4>
+          <p>미래완료 · 복합관계사 · 혼합가정법 · 도치</p>
+          <div class="acts">
+            <button class="btn btn-open" data-doc="pdf/grammar-level6.pdf" data-title="문법 실전 모의고사 LEVEL 6 미리보기" data-meta="중3 · 중등 심화">열어보기</button>
+            <a class="btn btn-dl" href="pdf/grammar-level6.pdf" download="NELT_문법실전모의고사_LEVEL6_미리보기.pdf" aria-label="LEVEL 6 미리보기 다운로드">저장</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card doc">
+        <figure><img src="thumb/grammar-level7.jpg" alt="문법 실전 모의고사 LEVEL 7 표지" loading="lazy"></figure>
+        <div class="body">
+          <p class="eyebrow">LEVEL 7 · 고1</p>
+          <h4>고등 기초</h4>
+          <p>과거완료 · 병렬 · 도치 · 생략 (수능 기초)</p>
+          <div class="acts">
+            <button class="btn btn-open" data-doc="pdf/grammar-level7.pdf" data-title="문법 실전 모의고사 LEVEL 7 미리보기" data-meta="고1 · 고등 기초">열어보기</button>
+            <a class="btn btn-dl" href="pdf/grammar-level7.pdf" download="NELT_문법실전모의고사_LEVEL7_미리보기.pdf" aria-label="LEVEL 7 미리보기 다운로드">저장</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p class="footnote">미리보기에는 각 권의 앞부분과 대표 회차가 담겨 있습니다. 전체 문항 확인이 필요하시면 <b>보안 PDF로 별도 공유</b>드릴 수 있으니 말씀만 주십시오.</p>
+  </div>
+</section>
+
+<!-- ═══════════ 05 진행 방식 ═══════════ -->
+<section class="band" id="run">
+  <div class="wrap">
+    <div class="sechead"><span class="secnum">05</span><h2 class="sectitle">이렇게 진행합니다</h2></div>
+    <p class="secsub">연중 상시 판매가 아니라, 신학기·방학처럼 학부모 관심이 높아지는 시기에 맞춰 짧게 여는 방식입니다. 회차당 1~2주면 마무리됩니다.</p>
+
+    <div class="steps">
+      <div class="card step">
+        <p class="no">STEP 1</p>
+        <h4>사전 예고</h4>
+        <p>오픈 1~2주 전에 카페와 영상으로 예고해 주시면, 저희가 전용 할인코드와 링크를 미리 준비해 전달드립니다.</p>
+        <p class="tail">대표님 준비 부담 — 콘텐츠 1~2건</p>
+      </div>
+      <div class="card step">
+        <p class="no">STEP 2</p>
+        <h4>스팟 오픈</h4>
+        <p>“이번 주만” 형태로 기간을 한정해 오픈합니다. 2회권 특가와 묶으면 짧은 기간에도 전환이 잘 일어납니다.</p>
+        <p class="tail">보통 1~2주 집중 판매</p>
+      </div>
+      <div class="card step">
+        <p class="no">STEP 3</p>
+        <h4>마감과 정산</h4>
+        <p>전용 코드·링크 기준으로 판매 실적이 자동 집계되므로, 대표님이 따로 정리하실 일은 없습니다. 회차가 끝나면 저희가 집계해 정산합니다.</p>
+        <p class="tail">응시 후기는 다음 회차 자산이 됩니다</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 06 정산 ═══════════ -->
+<section class="band" id="settle">
+  <div class="wrap">
+    <div class="sechead"><span class="secnum">06</span><h2 class="sectitle">수수료와 정산</h2></div>
+    <p class="secsub">복잡한 조건 없이 판매가 기준 단일 요율입니다.</p>
+
+    <div class="settle">
+      <div class="card rate">
+        <p class="lbl">수수료</p>
+        <p class="big">10<span>%</span></p>
+        <p>판매가 기준 · 응시권과 문법 모의고사 모두 동일하게 적용됩니다.</p>
+      </div>
+      <ul class="card">
+        <li><b>정산 시점</b><small>캠페인 회차 종료 후 판매 실적을 집계해 정산합니다.</small></li>
+        <li><b>실적 집계</b><small>사월이네공부방 전용 할인코드·링크 기준으로 자동 추적됩니다.</small></li>
+        <li><b>거래 구조</b><small>총판을 거치지 않고 NE능률 본사와 직거래합니다.</small></li>
+        <li><b>담당</b><small>주문·정산·응시권 발급 실무는 이국전 담당자가 맡습니다.</small></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 07 다음 단계 ═══════════ -->
+<section class="band" id="next">
+  <div class="wrap">
+    <div class="sechead"><span class="secnum">07</span><h2 class="sectitle">다음 단계</h2></div>
+    <p class="secsub">대표님께서 하실 일은 검토와 회신, 두 가지입니다. 이후 절차는 저희가 진행합니다.</p>
+
+    <ol class="card flowlist">
+      <li>
+        <h4>검토</h4>
+        <p>위 판매 상품 구성과 조건을 살펴봐 주십시오. 조정이 필요한 부분이 있으면 말씀해 주시면 됩니다.</p>
+      </li>
+      <li>
+        <h4>의견 또는 컨펌 회신</h4>
+        <p>본 메일로 회신해 주시거나, 카카오톡(아이디: NE능률)으로 알려주셔도 됩니다.</p>
+      </li>
+      <li class="key">
+        <h4>저희 내부 보고</h4>
+        <p>회신을 받으면 저희 내부 보고를 거쳐 진행하게 됩니다.</p>
+        <p class="why">사월이네공부방과 함께하는 첫 외부 공식 프로모션이라, 저희 대표님 보고가 필요한 사안입니다. 회신 주시는 즉시 보고를 올려 최대한 빠르게 결정하고 알려드리겠습니다.</p>
+      </li>
+      <li>
+        <h4>세팅 후 첫 스팟 오픈</h4>
+        <p>전용 코드·링크 발급과 상품 페이지 정비를 마치면 오픈합니다. 조건이 확정되면 <b>약 한 달 내 첫 오픈</b>이 가능한 일정입니다.</p>
+      </li>
+    </ol>
+
+    <div class="card reply">
+      <h3>회신은 편하신 방법으로 부탁드립니다</h3>
+      <div class="replygrid">
+        <dl class="rcard"><dt>이메일</dt><dd>보내드린 메일에 그대로 회신<small>가장 편한 방법입니다</small></dd></dl>
+        <dl class="rcard"><dt>카카오톡</dt><dd>아이디 NE능률<small>간단한 의견도 괜찮습니다</small></dd></dl>
+        <dl class="rcard"><dt>소통 담당</dt><dd>김동범<small>NE능률 디지털서비스본부 디지털마케팅팀</small></dd></dl>
+        <dl class="rcard"><dt>NELT 홈페이지</dt><dd><a href="https://www.nelt.co.kr/" target="_blank" rel="noopener">www.nelt.co.kr</a><small>시험 정보와 상품 페이지</small></dd></dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="thanks">바쁘신 중에 시간 내어 읽어주셔서 감사합니다. 궁금한 점은 언제든 편하게 말씀해 주십시오.</p>
+    <p class="who">NE능률 디지털서비스본부 디지털마케팅팀</p>
+    <p>팀장 김동범 · 실무 담당 이국전<br>
+      <a href="https://www.nelt.co.kr/" target="_blank" rel="noopener">www.nelt.co.kr</a></p>
+  </div>
+</footer>
+
+<!-- ═══════════ 자료 뷰어 ═══════════ -->
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="vTitle">
+  <div class="vbox">
+    <div class="vhead">
+      <div class="vt"><strong id="vTitle">자료</strong><span id="vMeta"></span></div>
+      <a class="btn btn-dl" id="vDown" href="#" download>저장</a>
+      <a class="btn btn-dl" id="vTab" href="#" target="_blank" rel="noopener">새 탭</a>
+      <button class="btn" id="vClose" aria-label="닫기">닫기</button>
+    </div>
+    <iframe class="vframe" id="vFrame" title="자료 미리보기"></iframe>
+    <p class="vfoot" id="vFoot">이 기기에서는 미리보기가 지원되지 않을 수 있습니다. 위의 ‘새 탭’ 또는 ‘저장’을 이용해 주십시오.</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  var viewer=document.getElementById('viewer'),
+      frame=document.getElementById('vFrame'),
+      vTitle=document.getElementById('vTitle'),
+      vMeta=document.getElementById('vMeta'),
+      vDown=document.getElementById('vDown'),
+      vTab=document.getElementById('vTab'),
+      lastFocus=null;
+
+  var isMobile=function(){
+    return window.innerWidth<720 || /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
+  };
+
+  function open(src,title,meta){
+    if(isMobile()){ window.open(src,'_blank','noopener'); return; }
+    lastFocus=document.activeElement;
+    vTitle.textContent=title||'자료';
+    vMeta.textContent=meta||'';
+    vDown.href=src; vTab.href=src;
+    frame.src=src+'#view=FitH';
+    viewer.classList.add('show');
+    document.body.style.overflow='hidden';
+    document.getElementById('vClose').focus();
+  }
+  function close(){
+    viewer.classList.remove('show');
+    frame.src='about:blank';
+    document.body.style.overflow='';
+    if(lastFocus)lastFocus.focus();
+  }
+
+  document.querySelectorAll('.btn-open').forEach(function(b){
+    b.addEventListener('click',function(){
+      open(b.dataset.doc,b.dataset.title,b.dataset.meta);
+    });
+  });
+  document.querySelectorAll('.doc figure').forEach(function(f){
+    var b=f.parentElement.querySelector('.btn-open');
+    if(!b)return;
+    f.style.cursor='pointer';
+    f.addEventListener('click',function(){open(b.dataset.doc,b.dataset.title,b.dataset.meta);});
+  });
+
+  document.getElementById('vClose').addEventListener('click',close);
+  viewer.addEventListener('click',function(e){ if(e.target===viewer)close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&viewer.classList.contains('show'))close(); });
+})();
+</script>
+</body>
+</html>
